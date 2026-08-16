@@ -1,7 +1,15 @@
-const openBtn  = document.getElementById('openMenu');
-    const closeBtn = document.getElementById('closeMenu');
-    const menu     = document.getElementById('siteMenu');
-const homeM = document.getElementById('homeMenu');
+fetch('navbar.html')
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById('navbar-placeholder').innerHTML = html;
+    initMenu(); // only run this after the navbar exists in the page
+  });
+
+function initMenu() {
+  const openBtn  = document.getElementById('openMenu');
+  const closeBtn = document.getElementById('closeMenu');
+  const menu     = document.getElementById('siteMenu');
+  const homeM = document.getElementById('homeMenu');
 
     function openMenu() {
       menu.classList.add('is-open');
@@ -28,3 +36,5 @@ const homeM = document.getElementById('homeMenu');
     function homeMenu() {
         window.location.href = "index.html";
     }
+
+}
