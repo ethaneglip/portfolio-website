@@ -129,10 +129,7 @@ body {
 }
 
 .test1 {
-    
     color: black;
-    padding: 80px 40px;
-
     h1 {
         font-family: sans-serif;
     }
@@ -141,18 +138,7 @@ body {
     }
 }
 
-.test2 {
-    background-color: f4f1ea;
-    color: black;
-    padding: 80px 40px;
-
-    h1 {
-        color: pink;
-        font-family: sans-serif;
-    }
-    p {
-        color: chartreuse;
-        font-family: 'Courier New', Courier, monospace;
-    }
+.page-content {
+  padding: 40px 80px;
 }
 

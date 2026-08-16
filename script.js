@@ -1,4 +1,4 @@
-fetch('navbar.html')
+fetch('/navbar.html')
   .then(res => res.text())
   .then(html => {
     document.getElementById('navbar-placeholder').innerHTML = html;
@@ -27,6 +27,7 @@ function initMenu() {
 
     openBtn.addEventListener('click', openMenu);
     closeBtn.addEventListener('click', closeMenu);
+    homeM.addEventListener('click', homeMenu);
 
     // Bonus: let people close it with the Escape key
     document.addEventListener('keydown', (e) => {
@@ -34,7 +35,7 @@ function initMenu() {
     });
 
     function homeMenu() {
-        window.location.href = "index.html";
+      window.location.href = "/index.html";
     }
 
 }
