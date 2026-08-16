@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Testing Title</title>
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+
+    <body>
+
+        <div class="topbar">
+            <!--<div class="logo">ETHAN EGLIP</div>-->
+            <button class="menu-toggle" id="homeMenu" aria-expanded="false" aria-controls="siteMenu">
+                <span class="logo">ETHAN EGLIP</span>
+            </button>
+            <button class="menu-toggle" id="openMenu" aria-expanded="false" aria-controls="siteMenu">
+                <span class="icon">☰</span>
+                <span class="label">MENU</span>
+            </button>
+        </div>
+
+        <!-- The full-screen menu, hidden until JS adds "is-open" -->
+        <nav class="overlay" id="siteMenu" aria-hidden="true">
+            <button class="overlay-close" id="closeMenu">
+                <span class="icon">✕</span>
+                <span class="label">CLOSE</span>
+            </button>
+
+        <div class="nav-list">
+            <div class="nav-item">
+                <span class="eyebrow">About</span>
+                <a href="#">Bio</a>
+            </div>
+            <div class="nav-item">
+                <span class="eyebrow">Catalog</span>
+                <a href="#">Music</a>
+            </div>
+            <div class="nav-item">
+                <span class="eyebrow">Music</span>
+                <a href="#">Licensing</a>
+            </div>
+            <div class="nav-item">
+                <span class="eyebrow">Performance &amp; Travel</span>
+                <a href="#">Calendar</a>
+            </div>
+            <div class="nav-item">
+                <span class="eyebrow">Photo &amp; Editorial</span>
+                <a href="#">Blog</a>
+            </div>
+            <div class="nav-item">
+                <span class="eyebrow">Address &amp; Email</span>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+
+        <section class="test1">
+            <h1>Heading</h1>
+            <p>paragraph</p>
+            <a href="https://www.youtube.com">Link</a>
+            <br>
+            <img src="images/butterfly.avif" alt="butterfly">
+        </section>
+
+        <section class="test2">
+            <h1>Heading 2</h1>
+            <p>p a r a g r a p h</p>
+            <a href="https://www.google.com">Link</a>
+            <br>
+            <img src="images/tiger.jpg" alt="tiger">
+        </section>
+
+        <section class="test2">
+            <h1>Heading 3</h1>
+            <p>list of music</p>
+            <a href="subject1/sub1test.html">music 1</a>
+        </section>
+
+        <script src="script.js"></script>
+    </body>
+</html>
+

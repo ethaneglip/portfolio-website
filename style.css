@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    background: #f4f1ea;
+    color: #111;
+}
+
+/* ---------- Top bar ---------- */
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;              /* keeps it above other content as things scroll under it */
+    background: #f4f1ea;       /* needs a background or content will show through */
+    border-bottom: 1px solid #ddd;   /* the thin line you asked about */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 40px;
+}
+
+.logo {
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+    font-family: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.menu-toggle .icon {
+    font-size: 22px;
+    line-height: 1;
+}
+
+.menu-toggle .label {
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+  /* ---------- The overlay itself ---------- */
+.overlay {
+    position: fixed;      /* stays put, covers the viewport regardless of scroll */
+    inset: 0;              /* shorthand for top:0; right:0; bottom:0; left:0; */
+    background: #f4f1ea;
+    color: #0a0a0a;
+
+    /* Hidden by default */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    /* Smooth fade + slight rise when it opens */
+    transform: translateY(-8px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 100;
+}
+
+  /* This class gets toggled by JS to show the menu */
+.overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.overlay-close {
+    position: absolute;
+    top: 24px;
+    right: 40px;
+    background: none;
+    border: none;
+    color: #0a0a0a;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-family: inherit;
+}
+
+.overlay-close .icon { font-size: 22px; }
+.overlay-close .label { font-size: 11px; letter-spacing: 2px; }
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    text-align: center;
+}
+
+.nav-item .eyebrow {
+    display: block;
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 4px;
+}
+
+.nav-item a {
+    color: #0a0a0a;
+    text-decoration: none;
+    font-size: 42px;
+    font-weight: 800;
+    transition: opacity 0.2s ease;
+}
+
+.nav-item a:hover,
+.nav-item a:focus-visible {
+    opacity: 0.6;
+}
+
+.test1 {
+    
+    color: black;
+    padding: 80px 40px;
+
+    h1 {
+        font-family: sans-serif;
+    }
+    p {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+
+.test2 {
+    background-color: f4f1ea;
+    color: black;
+    padding: 80px 40px;
+
+    h1 {
+        color: pink;
+        font-family: sans-serif;
+    }
+    p {
+        color: chartreuse;
+        font-family: 'Courier New', Courier, monospace;
+    }
+}
+
