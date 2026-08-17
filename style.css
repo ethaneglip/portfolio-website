@@ -142,3 +142,68 @@ body {
   padding: 40px 80px;
 }
 
+
+.hero-image {
+  position: relative;      /* lets .hero-text position itself against this box */
+  width: 100vw;
+  height: calc(100vh - 87px);
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: 0% 30%; /* keep left side of image in frame */
+}
+
+/* the fade */
+.hero-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    transparent 30%,
+    #f4f1ea 45%      /* match your page's background color */
+  );
+  pointer-events: none;   /* lets clicks pass through to whatever's beneath */
+}
+
+/* the centered text */
+.hero-text {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  text-align: center;
+  max-width: 30%;
+  z-index: 1;   /* sits above the fade */
+}
+
+.hero-text h1 {
+    font-size: 48px;
+}
+
+.hero-text p {
+    font-size: 18px;
+}
+
+.social-links {
+  position: absolute;
+  bottom: 24px;
+  right: 40px;
+  display: flex;
+  gap: 20px;         /* spacing between each link */
+}
+
+.social-links a {
+  color: #0a0a0a;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.social-links a:hover {
+  opacity: 0.6;
+}
