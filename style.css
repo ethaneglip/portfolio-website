@@ -4,11 +4,51 @@
     box-sizing: border-box;
 }
 
+h1 {
+    margin: 0;
+    font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    background: #f4f1ea;
+    color: #111;
+    font-weight: bold;
+    font-size: 48px;
+}
+
+h2 {
+    margin: 0;
+    font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    background: #f4f1ea;
+    color: #111;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 24px;
+}
+
+h3 {
+    margin: 0;
+    font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    background: #f4f1ea;
+    color: #111;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+h4 {
+    margin: 0;
+    font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    background: #f4f1ea;
+    color: #111;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 18px;
+}
+
 body {
     margin: 0;
     font-family: "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
     background: #f4f1ea;
     color: #111;
+    color: inherit;
+    text-decoration: inherit;
 }
 
 /* ---------- Top bar ---------- */
@@ -139,9 +179,22 @@ body {
 }
 
 .page-content {
-  padding: 40px 80px;
+  padding: 50px 80px;
 }
 
+.page-content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.page-content-list {
+  padding: 0px 80px;
+}
+
+.page-content-list p {
+    font-size: 18px;
+    line-height: 1.6;
+}
 
 .hero-image {
   position: relative;      /* lets .hero-text position itself against this box */
@@ -205,5 +258,54 @@ body {
 }
 
 .social-links a:hover {
+  opacity: 0.6;
+}
+
+.score-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;         /* spacing between each link */
+}
+
+.score-links a {
+    display: flex;          
+    align-items: center;    
+    gap: 8px;                  /* spacing between icon and text */
+    color: #0a0a0a;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.score-links a:hover {
+  opacity: 0.6;
+}
+
+.score-links img {
+  width: 20px;             /* control the icon's size explicitly */
+  height: 20px;
+}
+
+.media-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;      /* spacing between the score button and the audio player */
+}
+
+.back-link {
+  position: fixed;
+  top: calc(87px + 20px);
+  right: 40px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #0a0a0a;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.back-link:hover {
   opacity: 0.6;
 }
