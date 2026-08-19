@@ -309,3 +309,9 @@ body {
 .back-link:hover {
   opacity: 0.6;
 }
+
+blockquote {
+  font-style: italic;
+  padding-left: 40px;
+  font-size: 18px;
+}
