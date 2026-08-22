@@ -315,3 +315,70 @@ blockquote {
   padding-left: 40px;
   font-size: 18px;
 }
+
+
+.bio-page {
+  display: flex;
+  align-items: center;    /* vertically centers both columns against each other */
+  gap: 60px;
+  padding: 80px;
+  min-height: calc(100vh - 87px);   /* fills remaining screen below navbar */
+}
+
+.bio-text {
+  flex: 1;      /* takes up equal share of available space */
+}
+
+.bio-text h1 {
+  margin-bottom: 20px;
+}
+
+.bio-photo {
+  flex: 1;
+  display: flex;
+  justify-content: center;   /* centers the image horizontally in its column */
+}
+
+.bio-photo img {
+  max-height: 70vh;   /* caps the photo's height so it can't grow past this */
+  width: auto;          /* lets width scale proportionally, keeps aspect ratio */
+  object-fit: contain;  /* ensures no cropping/distortion while scaling down */
+  border-radius: 4px;   /* optional, subtle rounded corners */
+}
+
+.movements {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;      /* spacing between each movement row */
+  margin-top: 0px;
+}
+
+.movement {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.movement h3 {
+  min-width: 50px;   /* keeps titles aligned even if lengths differ */
+  font-weight: normal;
+  font-style: italic;
+}
+
+.movement audio {
+  flex: 1;               /* audio player fills remaining space */
+  max-width: 400px;   /* optional, caps how wide it can stretch */
+}
+
+.piece-media {
+  display: flex;
+  align-items: center;   /* or align-items: stretch, see note below */
+  gap: 24px;
+  padding: 0;
+}
+
+.divider {
+  width: 1px;
+  background: #0a0a0a;
+  align-self: stretch;   /* makes the line stretch to match the tallest sibling's height */
+}
