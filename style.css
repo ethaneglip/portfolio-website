@@ -49,6 +49,9 @@ body {
     color: #111;
     color: inherit;
     text-decoration: inherit;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* ---------- Top bar ---------- */
@@ -381,4 +384,22 @@ blockquote {
   width: 1px;
   background: #0a0a0a;
   align-self: stretch;   /* makes the line stretch to match the tallest sibling's height */
+}
+
+.page-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  padding: 24px 40px;
+}
+
+.page-footer a {
+  color: #0a0a0a;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.page-footer a:hover {
+  opacity: 0.6;
 }
